@@ -5,7 +5,7 @@ dest=${dest:-docker.ovpn}
 if [ ! -f "/local/$dest" ]; then
     echo "*** REGENERATING ALL CONFIGS ***"
     set -ex
-    #rm -rf /etc/openvpn/*
+    rm -rf /etc/openvpn/*
     ovpn_genconfig -u tcp://localhost
     sed -i 's|^push|#push|' /etc/openvpn/openvpn.conf
     echo localhost | ovpn_initpki nopass
