@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-    
+
     proxy:
         build: .
         ports:
@@ -13,7 +13,7 @@ services:
         restart: always
 
     openvpn:
-        image: kylemanna/openvpn
+        image: kylemanna/openvpn:2.3
         volumes:
             - .:/local
             - ./config:/etc/openvpn
