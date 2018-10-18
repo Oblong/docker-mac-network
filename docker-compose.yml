@@ -24,6 +24,8 @@ services:
         environment:
             dest: docker-for-mac.ovpn
             DEBUG: '1'
+            DOCKER_NETWORK: 172.16.0.0
+            DOCKER_NETMASK: 255.240.0.0
         command: /local/helpers/run.sh
         restart: always
 
