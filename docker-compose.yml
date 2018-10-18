@@ -1,7 +1,6 @@
-version: '2'
+version: '3'
 
 services:
-
     proxy:
         build: .
         ports:
@@ -14,7 +13,7 @@ services:
 
     openvpn:
         # kylemanna/openvpn:2.3
-        image: f0a0813c5240026ec823d5aab4393f4674cac553fe1f2a7004e8b3dc4bf1ad01
+        image: kylemanna/openvpn@sha256:87380e5184b10175ea1c0c96905ef3cfe0c60606a759af016c7dcce7fb0e837a
         volumes:
             - .:/local
             - ./config:/etc/openvpn
